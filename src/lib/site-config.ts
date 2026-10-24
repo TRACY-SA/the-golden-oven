@@ -53,7 +53,6 @@ export const headerLinks = [
   { href: "/about-us", label: "About Us" },
   { href: "/our-products", label: "Our Products" },
   { href: "/custom-cakes", label: "Create Your Cake" },
-  { href: "/custom-cakes#gallery", label: "Gallery" },
   { href: "/#reviews", label: "Reviews" },
   { href: "/contact", label: "Contact" },
 ] as const;
