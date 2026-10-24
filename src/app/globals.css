@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #fffcf5;
+  --ivory: #f7f5ea;
+  --gold: #f4de91;
+  --gold-deep: #50664b;
+  --chocolate: #3c3028;
+  --cocoa: #66564a;
+  --terracotta: #50664b;
+  --terracotta-deep: #3d4e39;
+  --peach: #dce5d4;
+  --peach-deep: #c5d4b8;
+  --white: #ffffff;
+  --line: rgb(60 48 40 / 12%);
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-ivory: var(--ivory);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-chocolate: var(--chocolate);
+  --color-cocoa: var(--cocoa);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-deep: var(--terracotta-deep);
+  --color-peach: var(--peach);
+  --color-peach-deep: var(--peach-deep);
+  --color-white: var(--white);
+  --font-sans: var(--font-source-sans);
+  --font-serif: var(--font-playfair);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--chocolate);
+  font-family: var(--font-source-sans), "Segoe UI", sans-serif;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+.font-serif {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+::selection {
+  background: #dce5d4;
+  color: #3c3028;
+}
+
+.font-script {
+  font-family: var(--font-script), "Segoe Script", cursive;
+}
+
+#reviews,
+#gallery {
+  scroll-margin-top: 5.5rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 80;
+  transform: translateY(-150%);
+  border-radius: 999px;
+  background: var(--chocolate);
+  color: var(--cream);
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
